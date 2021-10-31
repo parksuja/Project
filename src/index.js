@@ -6,10 +6,13 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/js/all.js";
+import { HelmetProvider } from "react-helmet-async";
 
 ReactDOM.render(
   <BrowserRouter>
-    <App />
+    <HelmetProvider>
+      <App />
+    </HelmetProvider>
   </BrowserRouter>,
   document.getElementById("root")
 );

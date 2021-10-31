@@ -37,10 +37,10 @@ const NavContainer = () => {
           <LinkTo to="/todaytr" className="logo">
             강의보기
           </LinkTo>
-          <LinkTo to="/calendar" className="logo">
+          <LinkTo to="/Lanking" className="logo">
             인기강의
           </LinkTo>
-          <LinkTo to="/postlist" className="logo">
+          <LinkTo to="/review" className="logo">
             수강후기
           </LinkTo>
           <LinkTo to="/mypage" className="logo">
