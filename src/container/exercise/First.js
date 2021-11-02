@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import React, { useEffect, useState } from "react";
 import { Animated } from "react-animated-css";
+// 인덱스에 추가
 import Responsive from "../../components/common/Responsive";
 import FirstExer from "../../components/exercises/FirstExer";
 import "./First.css";
