@@ -4,6 +4,7 @@ import * as bodyPix from "@tensorflow-models/body-pix";
 import React, { useRef } from "react";
 import * as posenet from "@tensorflow-models/posenet";
 import { drawKeypoints, drawSkeleton } from "./utilities";
+import ml5 from "ml5";
 //1.Install dependencies
 //2.Import  dependencies
 //3.Setup webcam and canvas

@@ -202,38 +202,6 @@ const First = ({ setSquatCount, setLungeCount, setShoulderCount }) => {
                       10회부터 시작하여 천천히 늘려보세요.
                     </div>
                   </tr>
-                  <tr id="lunge">
-                    <td>런지</td>
-                    <td>
-                      <input
-                        className="inputBox"
-                        type="number"
-                        // onChange={setLCount}
-                        placeholder="15"
-                      />
-                    </td>
-                    <div className="recomend" id="lunEx">
-                      런지는 한 쪽 다리에 10~15회씩 3~5set를 기본으로 합니다.
-                      처음이시라면 10회부터 시작하여 천천히 늘려보세요.
-                    </div>
-                  </tr>
-                  <tr id="press">
-                    <td>숄더프레스</td>
-                    <td>
-                      <input
-                        className="inputBox"
-                        type="number"
-                        // onChange={setShCount}
-                        placeholder="15"
-                      />
-                    </td>
-                    <div className="recomend" id="preEx">
-                      숄더프레스는 6~15회씩 4set를 기본으로 합니다. 자신에게
-                      알맞은 무게의 덤벨을 이용하면 더 큰 운동 효과를 볼 수
-                      있습니다. 가벼운 무게부터 시작하여 천천히 중량을
-                      늘려보세요.
-                    </div>
-                  </tr>
                 </table>
                 <div id="showExer" onClick={showExer}>
                   운동자세 보기
@@ -249,7 +217,7 @@ const First = ({ setSquatCount, setLungeCount, setShoulderCount }) => {
           <div className="ex">
             {pose === 0 && (
               <Animated animationIn="fadeIn" animationInDelay={500}>
-                <div id="pose">SQUAT</div>
+                <div id="pose">준비운동</div>
                 <img id="image" src={Health4} />
                 <span id="posetext">
                   <ol>
@@ -275,21 +243,25 @@ const First = ({ setSquatCount, setLungeCount, setShoulderCount }) => {
             )}
             {pose === 1 && (
               <Animated animationIn="fadeIn" animationInDelay={500}>
-                <div id="pose">SIDE LUNGE</div>
+                <div id="pose">몸풀기</div>
                 <img id="image" src={Health4} />
                 <span id="posetext">
                   <ol>
-                    <li>카메라를 바라보는 방향으로 섭니다.</li>
-                    <li>두 손은 모은 상태를 유지합니다.</li>
-                    <li>양발의 간격이 어깨의 2배정도 되도록 벌려줍니다.</li>
                     <li>
-                      한쪽 방향으로 몸을 옮겨 체중을 실어주며 옮기는 쪽 다리에
-                      대부분의 힘을 준 상태로 허리는 꼿꼿이 펴고 엉덩이를 뒤로
-                      빼며 체중을 실은 쪽의 무릎을 굽혀줍니다.
+                      카메라를 바라보는 방향을 기준으로 오른쪽으로 몸을 돌리고
+                      섭니다.
+                    </li>
+                    <li>두 손은 모은 상태를 유지합니다.</li>
+                    <li>
+                      양발의 간격은 골반보다 조금 더 넓게 유지하고, 양발 끝은
+                      바깥쪽으로 15도~20도 정도 벌려줍니다.
                     </li>
                     <li>
-                      굽힌 쪽의 허벅지가 바닥과 평행이 되면 천천히 준비자세로
-                      돌아옵니다.
+                      상체는 그대로 꼿꼿이 유지하면서 천천히 엉덩이를 뒤로 빼며
+                      무릎을 굽혀 앉는 자세를 취합니다.
+                    </li>
+                    <li>
+                      허벅지가 바닥과 평행이 되면 천천히 준비자세로 돌아옵니다.
                     </li>
                   </ol>
                 </span>
@@ -297,25 +269,33 @@ const First = ({ setSquatCount, setLungeCount, setShoulderCount }) => {
             )}
             {pose === 2 && (
               <Animated animationIn="fadeIn" animationInDelay={500}>
-                <div id="pose">SHOULDER PRESS</div>
+                <div id="pose">SQUAT</div>
                 <img id="image" src={Health4} />
                 <span id="posetext">
                   <ol>
-                    <li>카메라를 바라보는 방향으로 섭니다.</li>
-                    <li>양발의 간격은 어깨너비로 벌립니다.</li>
-                    <li>허리는 꼿꼿이 핀 상태를 유지합니다.</li>
                     <li>
-                      어깨 좌우 대칭을 유지하고, 손목과 팔꿈치가 일자를 이루도록
-                      하며 팔을 완전히 위쪽으로 펴줍니다.
+                      카메라를 바라보는 방향을 기준으로 오른쪽으로 몸을 돌리고
+                      섭니다.
                     </li>
-                    <li>천천히 준비자세로 돌아옵니다.</li>
+                    <li>두 손은 모은 상태를 유지합니다.</li>
+                    <li>
+                      양발의 간격은 골반보다 조금 더 넓게 유지하고, 양발 끝은
+                      바깥쪽으로 15도~20도 정도 벌려줍니다.
+                    </li>
+                    <li>
+                      상체는 그대로 꼿꼿이 유지하면서 천천히 엉덩이를 뒤로 빼며
+                      무릎을 굽혀 앉는 자세를 취합니다.
+                    </li>
+                    <li>
+                      허벅지가 바닥과 평행이 되면 천천히 준비자세로 돌아옵니다.
+                    </li>
                   </ol>
                 </span>
               </Animated>
             )}
             {pose === 3 && (
               <Animated animationIn="fadeIn" animationInDelay={500}>
-                <div id="pose">TREE POSE</div>
+                <div id="pose">마무리</div>
                 <img id="image" src={Health4} />
                 <span id="posetext">
                   <ol>

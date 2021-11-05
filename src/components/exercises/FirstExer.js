@@ -55,7 +55,7 @@ const FirstExer = () => {
                 STEP 1
               </Typography>
               <Typography variant="h5" component="h2">
-                스쿼트
+                준비운동
               </Typography>
             </CardContent>
           </Card>
@@ -72,7 +72,7 @@ const FirstExer = () => {
                 STEP 2
               </Typography>
               <Typography variant="h5" component="h2">
-                런지
+                몸풀기
               </Typography>
             </CardContent>
           </Card>
@@ -89,7 +89,7 @@ const FirstExer = () => {
                 STEP 3
               </Typography>
               <Typography variant="h5" component="h2">
-                숄더프레스
+                스쿼트
               </Typography>
             </CardContent>
           </Card>
@@ -105,7 +105,7 @@ const FirstExer = () => {
               STEP 4
             </Typography>
             <Typography variant="h5" component="h2">
-              나무자세
+              마무리
             </Typography>
           </CardContent>
         </Card>
