@@ -7,7 +7,7 @@ import { useRef } from "react";
 // relative여기서 태그의 위치를 살짝 변경하고 싶을 때 position: relative를 사용합니다
 import "./ExerciseContainer.css";
 import First from "./First";
-import Posenet from "./Posenet";
+import Test from "../../Test";
 
 const EC = styled.div`
 position : relative;
@@ -71,7 +71,7 @@ const ExerciseContainer = () => {
         {showResults && (
           <div>
             <Spacer />
-            <Posenet />
+            <Test />
 
             <Spacer />
           </div>

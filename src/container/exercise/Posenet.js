@@ -20,6 +20,7 @@ function Posenet() {
   const webcamRef = useRef(null);
   const canvasRef = useRef(null); //참조
 
+  
   //5.Load bodypix
   const runPosenet = async () => {
     const net = await posenet.load({
