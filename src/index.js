@@ -7,7 +7,7 @@ import { BrowserRouter } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/js/all.js";
 import { HelmetProvider } from "react-helmet-async";
-
+import "bootstrap/dist/css/bootstrap.min.css";
 ReactDOM.render(
   <BrowserRouter>
     <HelmetProvider>

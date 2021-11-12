@@ -60,6 +60,7 @@ function Detail1() {
                 </button>
               </div>
             </div>
+
             <div class="col-md-7">
               <div class="card shadow-sm">
                 <div class="card-body">
@@ -117,6 +118,7 @@ function Detail1() {
               </div>
             </div>
           </div>
+
           <div class="row pt-3">
             <div class="col-12">
               <form class="review-frm" name="frm">

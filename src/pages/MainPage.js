@@ -3,7 +3,7 @@ import React from "react";
 import FooterContainer from "../components/common/FooterContainer";
 import NavContainer from "../components/common/NavContainer";
 import Main from "../components/common/Main";
-
+import GoTop from "../components/GoToTop/GoTop";
 function MainPage() {
   return (
     <>
@@ -11,6 +11,7 @@ function MainPage() {
       <NavContainer />
       <Main />
       <FooterContainer />
+      <GoTop />
     </>
   );
 }

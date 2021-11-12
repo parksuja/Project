@@ -10,7 +10,7 @@ const BookItem = (props) => {
         <Card.Body>
           <Card.Title>{title}</Card.Title>
           <Link
-            to={"/post/" + id}
+            to={"/book/" + id}
             className="btn btn-primary"
             variant="primary"
           >

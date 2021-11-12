@@ -1,10 +1,20 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Form, Button } from "react-bootstrap";
 
-const SaveForm = (props) => {
+const Update = (props) => {
+  const id = props.match.params.id;
+
   const [book, setBook] = useState({
     title: "",
     author: "",
+  });
+
+  useEffect(() => {
+    fetch("http://localhost:8080/book/" + id)
+      .then((res) => res.json())
+      .then((res) => {
+        setBook(res);
+      });
   });
 
   const changeValue = (e) => {
@@ -16,16 +26,15 @@ const SaveForm = (props) => {
 
   const submitBook = (e) => {
     e.preventDefault();
-    fetch("http://localhost:8080/book", {
-      method: "POST",
+    fetch("http://localhost:8080/book/" + id, {
+      method: "PUT",
       headers: {
         "Content-Type": "application/json; charset=utf-8",
       },
       body: JSON.stringify(book),
     })
       .then((res) => {
-        console.log(1, res);
-        if (res.status === 201) {
+        if (res.status === 200) {
           return res.json();
         } else {
           return null;
@@ -34,9 +43,9 @@ const SaveForm = (props) => {
       .then((res) => {
         if (res.status !== null) {
           if (res !== null) {
-            props.history.push("/JoinForm"); //해당페이지로 이동
+            props.history.push("/book/" + id); //해당페이지로 이동
           } else {
-            alert("등록실패");
+            alert("수정실패");
           }
         }
       });
@@ -52,6 +61,7 @@ const SaveForm = (props) => {
             placeholder="Enter email"
             onChange={changeValue}
             name="title"
+            value={book.title}
           />
         </Form.Group>
 
@@ -62,6 +72,7 @@ const SaveForm = (props) => {
             placeholder="Enter email"
             name="author"
             onChange={changeValue}
+            value={book.author}
           />
         </Form.Group>
 
@@ -73,4 +84,4 @@ const SaveForm = (props) => {
   );
 };
 
-export default SaveForm;
+export default Update;
